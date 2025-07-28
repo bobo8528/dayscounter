@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('your-background-image.jpg'); /* Replace with your image path */
+    background-image: url(https://wondermural.com/cdn/shop/files/papier-peint-desert-cactus-solitaire-au-milieu-d-un-paysage-aride_994x994.jpg); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     color: white; /* Adjust text color for readability */
