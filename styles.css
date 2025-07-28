@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(https://github.com/bobo8528/dayscounter/blob/9ef4779a96b433607b8fb1fc41fa121ba003b687/images/yy.jpg); /* Replace with your image path */
+    background-image: url(images/yy.jpg); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     color: white; /* Adjust text color for readability */
