@@ -25,6 +25,11 @@ body {
   font-size: 10em;
   margin-bottom: 20px;
   white-space: nowrap; /* Prevents text from wrapping */
+  max-width: 100%;             /* Optional: limits width */
+  width: fit-content;          /* Shrinks to fit content */
+  margin-left: auto;           /* Center horizontally */
+  margin-right: auto;
+
 
 }
 
