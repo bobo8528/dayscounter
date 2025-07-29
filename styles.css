@@ -22,7 +22,7 @@ body {
 }
 
 .top-text {
-  font-size: 20em;
+  font-size: 10em;
   margin-bottom: 20px;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .digit {
-  height: 300px;
+  height: 100px;
   margin: 0 5px;
 }
 
