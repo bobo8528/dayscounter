@@ -2,22 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Days Elapsed</title>
+  <title>Incident-Free Days</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Days Since Launch</h1>
-    <div id="days-elapsed">0</div>
+    <div class="top-text">Incident Free Days</div>
+    <div id="days-elapsed" class="digit-row"></div>
+    <div class="bottom-text">Together, let's make our workplace incident free!</div>
   </div>
 
   <script>
-    // Replace this with your actual start date
     const startDate = new Date("2025-01-01");
     const today = new Date();
     const timeDiff = today - startDate;
     const daysElapsed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    document.getElementById("days-elapsed").textContent = daysElapsed;
+    const digits = daysElapsed.toString().split('');
+    const container = document.getElementById("days-elapsed");
+
+    digits.forEach(d => {
+      const img = document.createElement("img");
+      img.src = `digits/${d}.png`; // Make sure you have digits/0.png to digits/9.png
+      img.alt = d;
+      img.className = "digit";
+      container.appendChild(img);
+    });
   </script>
 </body>
 </html>
+
