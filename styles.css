@@ -41,8 +41,8 @@ body {
 }
 
 .digit {
-  height: 100px;
-  margin: 0 2px;
+  height: 8vw;
+  max-height: 120px;
 }
 
 .bottom-text {
