@@ -24,6 +24,8 @@ body {
 .top-text {
   font-size: 10em;
   margin-bottom: 20px;
+  white-space: nowrap; /* Prevents text from wrapping */
+
 }
 
 .digit-row {
