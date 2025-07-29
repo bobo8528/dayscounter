@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2px; /* Controls spacing between digits */
+  gap: 0px; /* Controls spacing between digits */
   margin-bottom: 20px;
 }
 
