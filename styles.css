@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
 }
 .top-text {
-  font-size: 8em;
+  font-size: 6em;
   margin-bottom: 20px;
   white-space: nowrap;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .digit {
-  height: 120px;    /* makes images bigger */
+  height: 160px;    /* makes images bigger */
   width: auto;      /* preserve aspect ratio */
   margin: 0;        /* minimal spacing */
 }
