@@ -34,16 +34,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  /* You can add gap or adjust margin here */
-  gap: 5px; /* makes digits closer together, adjust as needed */
+  gap: 2px; /* closes the space between digits */
 }
 
 .digit {
-  height: 120px;    /* increase from 80px to make bigger */
-  font-size: 8em;   /* make digits larger (add this if you want text to scale) */
-  margin: 0 2px;    /* reduce horizontal margin to bring digits closer */
-
+  height: 120px;    /* makes images bigger */
+  width: auto;      /* preserve aspect ratio */
+  margin: 0;        /* minimal spacing */
 }
 
 .bottom-text {
