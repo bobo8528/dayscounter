@@ -38,7 +38,8 @@ body {
 }
 
 .digit {
-  height: 80px;
+  height: 300px;
+  width: auto;
   margin: 0 5px;
 }
 
