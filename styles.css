@@ -35,11 +35,15 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  /* You can add gap or adjust margin here */
+  gap: 5px; /* makes digits closer together, adjust as needed */
 }
 
 .digit {
-  height: 80px;
-  margin: 0 5px;
+  height: 120px;    /* increase from 80px to make bigger */
+  font-size: 8em;   /* make digits larger (add this if you want text to scale) */
+  margin: 0 2px;    /* reduce horizontal margin to bring digits closer */
+
 }
 
 .bottom-text {
