@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
 }
 .top-text {
-  font-size: 6em;
+  font-size: em;
   margin-bottom: 20px;
   white-space: nowrap;
 }
@@ -34,11 +34,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2px; /* closes the space between digits */
+  gap: 0px; /* closes the space between digits */
 }
 
 .digit {
-  height: 160px;    /* makes images bigger */
+  height: 200px;    /* makes images bigger */
   width: auto;      /* preserve aspect ratio */
   margin: 0;        /* minimal spacing */
 }
