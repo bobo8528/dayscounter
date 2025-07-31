@@ -38,7 +38,7 @@ body {
 }
 
 .digit {
-  height: 200px;    /* makes images bigger */
+  height: 300px;    /* makes images bigger */
   width: auto;      /* preserve aspect ratio */
   margin: 0;        /* minimal spacing */
 }
