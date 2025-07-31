@@ -19,9 +19,9 @@ body {
   padding: 40px 20px;
   border-radius: 10px;
   display: inline-block;
-  width: auto;
+  width: 80;
   max-width: none;
-  height: auto;
+  height: 60;
   box-sizing: border-box;
 }
 .top-text {
