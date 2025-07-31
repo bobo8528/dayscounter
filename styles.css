@@ -18,13 +18,16 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px 20px;
   border-radius: 10px;
-  max-width: 600px;
-  width: 90%;
+  display: inline-block;
+  width: auto;
+  max-width: none;
+  height: auto;
+  box-sizing: border-box;
 }
-
 .top-text {
   font-size: 8em;
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .digit-row {
