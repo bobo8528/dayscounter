@@ -17,13 +17,16 @@
     <!-- Separate container for text -->
     <div class="text-container">
       <div class="top-text">Incident Free Days</div>
-      <div class="bottom-text">Together, let's make our workplace incident free!</div>
+      <div class="bottom-text">Together, let's make our Skyworks incident free!</div>
     </div>
   </div>
 
+  <!-- Add reset button -->
+  <button id="reset-btn" class="reset-button">Reset Counter</button>
+
   <script>
+     let startDate = new Date("2025-07-06");
     function updateCounter() {
-      const startDate = new Date("2025-07-06");
       const today = new Date();
       const daysElapsed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
       const digits = daysElapsed.toString().split('');
@@ -33,6 +36,12 @@
         `<span class="digit">${d}</span>`
       ).join('');
     }
+
+    // Add reset functionality
+    document.getElementById('reset-btn').addEventListener('click', function() {
+      startDate = new Date(); // Set to current date
+      updateCounter();
+    });
 
     updateCounter();
     setInterval(updateCounter, 86400000); // Refresh every 24 hours
