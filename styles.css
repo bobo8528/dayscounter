@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-image: url('Untitled design.png');
@@ -19,47 +19,36 @@ body {
   border-radius: 10px;
   text-align: center;
   width: 90%;
-  max-width: 1200px;
-}
-
-.digit-container {
-  position: relative; /* Anchor for absolute positioning */
-  width: 100%;
-  min-height: 800px; /* Match digit height */
-  margin-bottom: 20px; /* Space between digits and text */
+  max-width: 1000px;
 }
 
 .digit-row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute; /* Remove from normal flow */
-  left: 0;
-  right: 0;
-  top: 0;
-  gap: 0; /* Remove spacing between digits */
+  align-items: flex-end; /* Align digits to the bottom */
+  margin-bottom: 10px; /* Space between digits and "Incident Free Days" */
 }
 
 .digit {
-  height: 800px;
+  height: 600px; /* Adjusted to match your design */
   width: auto;
-  margin: 0 -40px; /* Adjust overlap as needed */
-}
-
-/* Text Containers (now independent) */
-.top-text, .bottom-text {
-  position: relative; /* Ensure text stays below digits */
-  z-index: 1; /* Keep text above digits if overlapping */
+  margin: 0 -50px; /* Overlap digits slightly */
+  image-rendering: crisp-edges;
 }
 
 .top-text {
-  font-size: 8em;
-  margin: 0 0 20px 0; /* Reduce top margin */
+  font-size: 4em; /* Smaller than digits, as in your image */
+  margin: 0 0 30px 0; /* Space below "Incident Free Days" */
+  white-space: nowrap;
 }
 
 .bottom-text {
-  font-size: 1.8em;
+  font-size: 1.5em;
   background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
