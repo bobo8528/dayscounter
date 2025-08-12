@@ -59,3 +59,23 @@ body {
   display: inline-block;
   margin-top: 10px;
 }
+
+/* Reset button styles */
+.reset-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+}
