@@ -23,7 +23,7 @@ body {
 
 /* Dedicated container for digits (separate from text) */
 .digits-container {
-  margin-bottom: 20px; /* Space between digits and text */
+  margin-bottom: 15px; /* Space between digits and text */
 }
 
 .digit-row {
