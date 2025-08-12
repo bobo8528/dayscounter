@@ -3,30 +3,28 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: left;
+  justify-content: center; /* Center horizontally */
   align-items: center;
   min-height: 100vh;
   background-image: url('Untitled design.png');
   background-size: cover;
   background-position: center;
   color: white;
-  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .container {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px 20px;
+  padding: 40px;
   border-radius: 10px;
-  display: inline-block;
-  width: 80;
-  max-width: none;
-  height: 60;
-  box-sizing: border-box;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
 }
+
 .top-text {
   font-size: 8em;
-  margin-bottom: 20px;
+  margin: 20px 0;
   white-space: nowrap;
 }
 
@@ -34,18 +32,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .digit {
-  height: 400px;
+  height: 800px; /* 2x larger */
   width: auto;
-  margin: 0 5px;
+  margin: 0 -30px; /* Overlap digits slightly */
+  image-rendering: crisp-edges; /* Keeps digits sharp */
 }
 
 .bottom-text {
   font-size: 1.8em;
   background-color: black;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
 }
