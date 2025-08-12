@@ -33,9 +33,9 @@ body {
 }
 
 .digit {
-  font-family: 'Black Ops One', cursive;
+  font-family: 'Monoton', cursive;
   font-size: 24rem;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1;
   margin: 0 4px; /* Adjust overlap between digits */
 }
