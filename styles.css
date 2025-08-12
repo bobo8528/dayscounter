@@ -21,23 +21,32 @@ body {
   max-width: 1000px;
 }
 
+/* Dedicated container for digits (separate from text) */
+.digits-container {
+  margin-bottom: 20px; /* Space between digits and text */
+}
+
 .digit-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .digit {
-  font-size: 10rem; /* Massive digits (adjust as needed) */
+  font-size: 10rem;
   font-weight: bold;
   line-height: 1;
-  margin: 0 -15px; /* Slight overlap between digits */
+  margin: 0 -20px; /* Adjust overlap between digits */
+}
+
+/* Text containers (now fully independent) */
+.text-container {
+  margin-top: 20px; /* Space after digits */
 }
 
 .top-text {
   font-size: 4em;
-  margin: 0 0 30px 0;
+  margin: 0;
   white-space: nowrap;
 }
 
@@ -47,4 +56,5 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
+  margin-top: 10px;
 }
