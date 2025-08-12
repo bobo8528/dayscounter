@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +8,8 @@
 </head>
 <body>
   <div class="container">
-    <div class="top-text">Incident Free Days</div>
-    <div id="days-elapsed" class="digit-row"></div>
+    <div id="days-elapsed" class="digit-row"></div> <!-- Digits now come FIRST -->
+    <div class="top-text">Incident Free Days</div> <!-- Text moved below -->
     <div class="bottom-text">Together, let's make our workplace incident free!</div>
   </div>
 
@@ -27,11 +26,8 @@
       ).join('');
     }
 
-    // Initial load
-    updateCounter();
-
-    // Auto-refresh every 24 hours (86400000 ms)
-    setInterval(updateCounter, 86400000);
+    updateCounter(); // Initial load
+    setInterval(updateCounter, 86400000); // Refresh every 24 hours
   </script>
 </body>
 </html>
