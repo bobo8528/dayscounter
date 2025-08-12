@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident-Free Days</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('Untitled design.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      padding-bottom: 80px; /* Space for reset button */
+      border-radius: 10px;
+      text-align: center;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .digits-container {
+      margin-bottom: 20px;
+    }
+
+    .digit-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .digit {
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin: 0 -15px;
+      padding: 0 20px;
+      border: 3px solid #ff3e3e;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .digit:not(:first-child) {
+      margin-left: -25px;
+      z-index: 1;
+    }
+
+    .text-container {
+      margin-top: 20px;
+    }
+
+    .top-text {
+      font-size: 4em;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .bottom-text {
+      font-size: 1.5em;
+      background-color: black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .reset-button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 700;
+      background-color: #ff3e3e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 100;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .reset-button:hover {
+      background-color: #ff1e1e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="reset-btn" class="reset-button">Reset Counter</button>
+    
+    <div class="digits-container">
+      <div id="days-elapsed" class="digit-row"></div>
+    </div>
+    
+    <div class="text-container">
+      <div class="top-text">Incident Free Days</div>
+      <div class="bottom-text">Together, let's make our workplace incident free!</div>
+    </div>
+  </div>
+
+  <script>
+    // Store the start date in localStorage
+    function getStartDate() {
+      const storedDate = localStorage.getItem('incidentStartDate');
+      return storedDate ? new Date(storedDate) : new Date("2025-01-01");
+    }
+
+    function updateCounter() {
+      const startDate = getStartDate();
+      const today = new Date();
+      const daysElapsed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+      const digits = daysElapsed.toString().split('');
+      const container = document.getElementById("days-elapsed");
+      
+      container.innerHTML = digits.map(d => 
+        `<span class="digit">${d}</span>`
+      ).join('');
+    }
+
+    // Reset function
+    document.getElementById("reset-btn").addEventListener("click", () => {
+      if (confirm("Are you sure you want to reset the counter to today?")) {
+        localStorage.setItem('incidentStartDate', new Date().toISOString());
+        updateCounter();
+        alert("Counter reset to 0 days!");
+      }
+    });
+
+    // Initial load
+    updateCounter();
+    setInterval(updateCounter, 86400000); // Refresh every 24 hours
+  </script>
+</body>
+</html>
