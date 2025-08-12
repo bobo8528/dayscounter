@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('Untitled design.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 1400px;
+}
+
+/* Dedicated container for digits (separate from text) */
+.digits-container {
+  margin-bottom: 10px; /* Space between digits and text */
+}
+
+.digit-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digit {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20rem;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 4px; /* Adjust overlap between digits */
+}
+
+/* Text containers (now fully independent) */
+.text-container {
+  margin-top: 20px; /* Space after digits */
+}
+
+.top-text {
+  font-size: 8em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.bottom-text {
+  font-size: 1.5em;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Reset button styles */
+.reset-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1em;
+  transition: background-color 0.3s;
+  z-index: 100;
+}
+
+.reset-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.modal-buttons button:first-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background-color: #f44336;
+  color: white;
+}
