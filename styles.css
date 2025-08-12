@@ -33,6 +33,7 @@ body {
 }
 
 .digit {
+  font-family: 'Monoton', cursive;
   font-size: 24rem;
   font-weight: bold;
   line-height: 1;
