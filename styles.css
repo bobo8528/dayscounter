@@ -22,24 +22,39 @@ body {
   max-width: 1200px;
 }
 
-.top-text {
-  font-size: 8em;
-  margin: 20px 0;
-  white-space: nowrap;
+.digit-container {
+  position: relative; /* Anchor for absolute positioning */
+  width: 100%;
+  min-height: 800px; /* Match digit height */
+  margin-bottom: 20px; /* Space between digits and text */
 }
 
 .digit-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  position: absolute; /* Remove from normal flow */
+  left: 0;
+  right: 0;
+  top: 0;
+  gap: 0; /* Remove spacing between digits */
 }
 
 .digit {
-  height: 800px; /* 2x larger */
+  height: 800px;
   width: auto;
-  margin: 0 -30px; /* Overlap digits slightly */
-  image-rendering: crisp-edges; /* Keeps digits sharp */
+  margin: 0 -40px; /* Adjust overlap as needed */
+}
+
+/* Text Containers (now independent) */
+.top-text, .bottom-text {
+  position: relative; /* Ensure text stays below digits */
+  z-index: 1; /* Keep text above digits if overlapping */
+}
+
+.top-text {
+  font-size: 8em;
+  margin: 0 0 20px 0; /* Reduce top margin */
 }
 
 .bottom-text {
@@ -48,5 +63,4 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
-  margin-top: 20px;
 }
