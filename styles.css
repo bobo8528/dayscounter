@@ -33,14 +33,13 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-  gap: 0; /* Removes default gap between flex items */
 }
 
 .digit {
-  height: 800px;
+  height: 800px; /* 2x larger */
   width: auto;
-  margin: 0 -50px; /* Negative margin pulls digits closer */
-  image-rendering: crisp-edges;
+  margin: 0 -30px; /* Overlap digits slightly */
+  image-rendering: crisp-edges; /* Keeps digits sharp */
 }
 
 .bottom-text {
