@@ -25,7 +25,7 @@
   <button id="reset-btn" class="reset-button">Reset Counter</button>
 
   <script>
-     let startDate = new Date("2025-07-06");
+    let startDate = new Date(localStorage.getItem('incidentCounterStartDate') || "2025-07-06");
     function updateCounter() {
       const today = new Date();
       const daysElapsed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
@@ -40,6 +40,8 @@
     // Add reset functionality
     document.getElementById('reset-btn').addEventListener('click', function() {
       startDate = new Date(); // Set to current date
+    // Store the new start date in localStorage
+    localStorage.setItem('incidentCounterStartDate', startDate);
       updateCounter();
     });
 
