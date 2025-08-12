@@ -34,7 +34,7 @@ body {
 
 .digit {
   font-family: 'Red Hat Display', sans-serif;
-  font-size: 20rem;
+  font-size: 30rem;
   font-weight: normal;
   line-height: 1;
   margin: 0 4px; /* Adjust overlap between digits */
