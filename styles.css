@@ -33,10 +33,10 @@ body {
 }
 
 .digit {
-  font-size: 10rem;
+  font-size: 14rem;
   font-weight: bold;
   line-height: 1;
-  margin: 0 -20px; /* Adjust overlap between digits */
+  margin: 0 4px; /* Adjust overlap between digits */
 }
 
 /* Text containers (now fully independent) */
