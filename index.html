@@ -9,19 +9,19 @@
 </head>
 <body>
   <div class="container">
-    <!-- Dedicated container for digits -->
+    <!-- independent container for digits -->
     <div class="digits-container">
       <div id="days-elapsed" class="digit-row"></div>
     </div>
 
-    <!-- Separate container for text -->
+    <!-- separate container for text -->
     <div class="text-container">
       <div class="top-text">Incident Free Days</div>
       <div class="bottom-text">Together, let's make Skyworks incident free!</div>
     </div>
   </div>
 
-  <!-- Add reset button -->
+  <!-- reset button to set start date to current date -->
   <button id="reset-btn" class="reset-button">Reset Counter</button>
 
   <script>
@@ -37,7 +37,7 @@
       ).join('');
     }
 
-    // Add reset functionality
+    // Add reset function
     document.getElementById('reset-btn').addEventListener('click', function() {
       startDate = new Date(); // Set to current date
     // Store the new start date in localStorage
