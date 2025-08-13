@@ -24,29 +24,6 @@
   <!-- Add reset button -->
   <button id="reset-btn" class="reset-button">Reset Counter</button>
 
-  <script>
-    let startDate = new Date(localStorage.getItem('incidentCounterStartDate') || "2025-07-06");
-    function updateCounter() {
-      const today = new Date();
-      const daysElapsed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-      const digits = daysElapsed.toString().split('');
-      const container = document.getElementById("days-elapsed");
-      
-      container.innerHTML = digits.map(d => 
-        `<span class="digit">${d}</span>`
-      ).join('');
-    }
-
-    // Add reset functionality
-    document.getElementById('reset-btn').addEventListener('click', function() {
-      startDate = new Date(); // Set to current date
-    // Store the new start date in localStorage
-    localStorage.setItem('incidentCounterStartDate', startDate);
-      updateCounter();
-    });
-
-    updateCounter();
-    setInterval(updateCounter, 86400000); // Refresh every 24 hours
-</script>
+  <script src="script.js></script>
 </body>
 </html>
